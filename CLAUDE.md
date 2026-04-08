@@ -292,15 +292,15 @@ USE WHEN: you need capabilities beyond what other tools provide:
 
 ## Decision Rules (follow these automatically)
 
-1. **User reports a problem** → Serena (code context) + claude-mem (past issues) + systematic-debugging skill BEFORE responding
-2. **User asks "how do I..."** → Context7 (library docs) + Serena (existing patterns) + claude-mem (past solutions)
+1. **User reports a problem** → code-review-graph (structural context) → Serena (symbol-level detail) → claude-mem (past issues) → systematic-debugging skill BEFORE responding
+2. **User asks "how do I..."** → graphify (architecture/design rationale) → Context7 (library docs) → Serena (existing patterns) → claude-mem (past solutions)
 3. **User shares a URL** → Playwright to browse it
 4. **Starting any non-trivial task** → check superpowers skills (brainstorming, debugging, TDD)
-5. **Making code changes** → Serena's `find_referencing_symbols` to check impact + code-simplifier after
+5. **Making code changes** → code-review-graph (get_impact_radius, get_affected_flows) → Serena (find_referencing_symbols) → code-simplifier after
 6. **Completing work** → verification-before-completion skill + code-reviewer agent
 7. **Multiple independent tasks** → dispatching-parallel-agents or Agent Teams
 8. **User references past work** → claude-mem search
-9. **Frontend/UI work** → ui-ux-pro-max skill
+9. **Frontend/UI work** → graphify (component architecture) → ui-ux-pro-max skill
 10. **Complex multi-step project** → GSD skills for phased management
 11. **External library usage** → Context7 for docs, ALWAYS
 12. **After writing significant code** → spawn code-simplifier agent to review
