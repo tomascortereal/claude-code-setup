@@ -44,8 +44,7 @@ For the full visual walkthrough with component details, see [docs/HOW-IT-WORKS.m
 | **Plugin Agents** | 4 | Agent definitions bundled inside 3 plugins |
 | **Total Slash Commands** | **100** | All available slash commands (61 + 32 + 7) |
 | **Hooks** | 8 | Lifecycle automation (SessionStart, PreToolUse, PostToolUse) |
-| **Plugins** | 17 installed (16 enabled) | Installed via the install script |
-| **MCP Servers** | 1 | Standalone MCP servers (configured via `~/.claude/.mcp.json`) |
+| **Plugins & MCP** | 18 (17 plugins + 1 standalone MCP) | Serena, Context7, Playwright, code-review-graph, etc. |
 
 ## Quick Install
 
