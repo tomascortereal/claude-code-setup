@@ -155,7 +155,7 @@ echo "  3. Your first session will trigger the memory symlink hook automatically
 echo ""
 echo "Installed:"
 echo "  - 21 agents"
-echo "  - 61 standalone skills + 33 plugin skills + 7 plugin commands"
+echo "  - 61 standalone skills + 32 plugin skills + 7 plugin commands + 4 plugin agents"
 echo "  - 8 lifecycle hooks"
 echo "  - 16 plugins"
 echo "  - Global memory system"

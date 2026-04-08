@@ -7,7 +7,7 @@ Run the integration sync check:
 
 1. Execute this command and read the output:
 ```bash
-node "/home/tomascortereal/.claude/hooks/integration-sync.js"
+node "$HOME/.claude/hooks/integration-sync.js"
 ```
 
 2. If the output is empty — everything is already documented. Tell the user "All integrations are synced."

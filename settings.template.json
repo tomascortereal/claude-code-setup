@@ -66,6 +66,16 @@
         "hooks": [
           {
             "type": "command",
+            "command": "uvx --from <YOUR_SCANNER_PACKAGE> <YOUR_SCANNER_COMMAND>",
+            "timeout": 30
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
             "command": "node \"$HOME/.claude/hooks/gsd-prompt-guard.js\"",
             "timeout": 5
           }
@@ -122,6 +132,12 @@
       "source": {
         "source": "github",
         "repo": "Arize-ai/arize-skills"
+      }
+    },
+    "claude-code-lsps": {
+      "source": {
+        "source": "github",
+        "repo": "Piebald-AI/claude-code-lsps"
       }
     }
   },

@@ -20,7 +20,7 @@ If you don't use OTEL telemetry, you can remove those env vars entirely.
 
 ### 2. Add a Code Scanner Hook (Optional)
 
-If your organization has a code scanning requirement, add this to the `PreToolUse` hooks in `settings.json`:
+If your organization has a code scanning requirement (e.g., Siemens genai-codescan), add this to the `PreToolUse` hooks in `settings.json`:
 
 ```json
 {
@@ -32,6 +32,13 @@ If your organization has a code scanning requirement, add this to the `PreToolUs
     }
   ]
 }
+```
+
+The scanner hook runs **before** every Write/Edit operation and can block changes that violate policy. A placeholder is included in `settings.template.json` — replace the `<YOUR_SCANNER_PACKAGE>` and `<YOUR_SCANNER_COMMAND>` with your scanner details, or remove the entry if you don't need it.
+
+If your scanner requires authentication, set the token in `~/.claude/.env`:
+```
+CODE_SCAN_TOKEN=<your-token>
 ```
 
 ### 3. Set Up Your Memory
@@ -95,3 +102,20 @@ If you use Ruflo or other MCP servers, configure them separately — they're not
 - **Disable a hook**: Remove the entry from the `hooks` section in `settings.json`
 - **Remove a skill**: Delete the skill's directory from `~/.claude/skills/`
 - **Remove an agent**: Delete the agent's `.md` file from `~/.claude/agents/`
+
+### Disabled by Default
+
+Two plugins are installed but disabled out of the box:
+
+| Plugin | Why disabled | How to enable |
+|--------|-------------|---------------|
+| **greptile** | Requires a separate Greptile API key | Set `"greptile@claude-plugins-official": true` in `enabledPlugins` and configure your API key |
+| **vtsls** | Redundant — `basedpyright` + `typescript-lsp` cover the same need | Set `"vtsls@claude-code-lsps": true` in `enabledPlugins` |
+
+### Plugin Agents vs Plugin Skills
+
+Some plugins provide **agents** (spawn via the Agent tool) rather than skills (invoke via `/slash-command`):
+
+- **code-simplifier** — spawn with `subagent_type: "code-simplifier:code-simplifier"`
+- **code-reviewer** — spawn with `subagent_type: "superpowers:code-reviewer"`
+- **agent-sdk-verifier-ts/py** — spawn with `subagent_type: "agent-sdk-dev:agent-sdk-verifier-ts"` (or `-py`)

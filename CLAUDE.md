@@ -154,7 +154,7 @@ USE WHEN: referencing past work, checking if something was solved before, or whe
 - PROACTIVELY search when the user says "remember when...", "last time...", "we already did..."
 
 ### Auto Memory (built-in)
-- Check `/home/tomascortereal/.claude/projects/*/memory/` for project-specific memory
+- Check `$HOME/.claude/projects/*/memory/` for project-specific memory
 - Update memory files when learning stable patterns or preferences
 
 ---
