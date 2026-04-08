@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 860" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="860" fill="#ffffff" rx="8"/>
+
+  <!-- Title -->
+  <text x="550" y="35" text-anchor="middle" font-size="22" font-weight="bold" fill="#2C3E50">How Claude Code Setup Works</text>
+
+  <!-- Main Container (dashed) -->
+  <rect x="140" y="55" width="920" height="770" rx="12" fill="#f8f9fa" stroke="#adb5bd" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="600" y="82" text-anchor="middle" font-size="16" font-weight="bold" fill="#495057">CLAUDE CODE CLI</text>
+
+  <!-- YOU person icon -->
+  <circle cx="65" cy="310" r="18" fill="#dae8fc" stroke="#6c8ebf" stroke-width="2"/>
+  <line x1="65" y1="328" x2="65" y2="370" stroke="#6c8ebf" stroke-width="2"/>
+  <line x1="40" y1="345" x2="90" y2="345" stroke="#6c8ebf" stroke-width="2"/>
+  <line x1="65" y1="370" x2="42" y2="400" stroke="#6c8ebf" stroke-width="2"/>
+  <line x1="65" y1="370" x2="88" y2="400" stroke="#6c8ebf" stroke-width="2"/>
+  <text x="65" y="420" text-anchor="middle" font-size="14" font-weight="bold" fill="#2C3E50">YOU</text>
+
+  <!-- Arrow: YOU to container -->
+  <line x1="100" y1="350" x2="135" y2="350" stroke="#2C3E50" stroke-width="3"/>
+  <polygon points="140,350 132,344 132,356" fill="#2C3E50"/>
+  <text x="120" y="340" text-anchor="middle" font-size="12" font-weight="bold" fill="#2C3E50">prompt</text>
+
+  <!-- ===== SECTION 1: CONFIGURATION ===== -->
+
+  <!-- CLAUDE.md -->
+  <rect x="175" y="100" width="415" height="115" rx="10" fill="#1a1a2e" stroke="#0d0d1a" filter="url(#shadow)"/>
+  <text x="382" y="130" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">CLAUDE.md</text>
+  <text x="382" y="150" text-anchor="middle" font-size="11" fill="#cccccc" font-style="italic">"The Brain"</text>
+  <text x="382" y="175" text-anchor="middle" font-size="11" fill="#ffffff">15 sections of auto-decision rules</text>
+  <text x="382" y="192" text-anchor="middle" font-size="11" fill="#ffffff">that tell Claude WHAT tools to use and WHEN</text>
+
+  <!-- settings.json -->
+  <rect x="610" y="100" width="415" height="115" rx="10" fill="#2c3e50" stroke="#1a252f" filter="url(#shadow)"/>
+  <text x="817" y="130" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">settings.json</text>
+  <text x="817" y="150" text-anchor="middle" font-size="11" fill="#cccccc" font-style="italic">Configuration</text>
+  <text x="817" y="175" text-anchor="middle" font-size="11" fill="#ffffff">model, plugins, hooks,</text>
+  <text x="817" y="192" text-anchor="middle" font-size="11" fill="#ffffff">env vars, telemetry</text>
+
+  <!-- Arrow: Config to Decision -->
+  <line x1="600" y1="225" x2="600" y2="260" stroke="#bdc3c7" stroke-width="2"/>
+  <polygon points="600,265 594,257 606,257" fill="#bdc3c7"/>
+
+  <!-- ===== SECTION 2: DECISION ENGINE ===== -->
+
+  <rect x="175" y="270" width="850" height="75" rx="8" fill="#3498db" stroke="#2980b9" filter="url(#shadow)"/>
+  <text x="600" y="300" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">14 Decision Rules  --  Automatic Tool Selection</text>
+  <text x="600" y="322" text-anchor="middle" font-size="11" fill="#e8f4fd">Rules in CLAUDE.md automatically match your request to the right combination of tools</text>
+
+  <!-- Arrow: Decision to Execution -->
+  <line x1="600" y1="355" x2="600" y2="390" stroke="#bdc3c7" stroke-width="2"/>
+  <polygon points="600,395 594,387 606,387" fill="#bdc3c7"/>
+
+  <!-- ===== SECTION 3: EXECUTION LAYER ===== -->
+
+  <!-- Skills -->
+  <rect x="175" y="400" width="270" height="140" rx="12" fill="#e74c3c" stroke="#c0392b" filter="url(#shadow)"/>
+  <text x="310" y="428" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Skills</text>
+  <text x="310" y="456" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">100</text>
+  <text x="310" y="474" text-anchor="middle" font-size="10" fill="#f5c6cb">/slash commands</text>
+  <text x="310" y="500" text-anchor="middle" font-size="10" fill="#ffffff">TDD, debugging,</text>
+  <text x="310" y="514" text-anchor="middle" font-size="10" fill="#ffffff">planning, brainstorming,</text>
+  <text x="310" y="528" text-anchor="middle" font-size="10" fill="#ffffff">code review...</text>
+
+  <!-- Agents -->
+  <rect x="465" y="400" width="270" height="140" rx="12" fill="#9b59b6" stroke="#8e44ad" filter="url(#shadow)"/>
+  <text x="600" y="428" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Agents</text>
+  <text x="600" y="456" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">25</text>
+  <text x="600" y="474" text-anchor="middle" font-size="10" fill="#e8d5f5">spawned workers</text>
+  <text x="600" y="500" text-anchor="middle" font-size="10" fill="#ffffff">Code review, parallel</text>
+  <text x="600" y="514" text-anchor="middle" font-size="10" fill="#ffffff">tasks, research,</text>
+  <text x="600" y="528" text-anchor="middle" font-size="10" fill="#ffffff">exploration...</text>
+
+  <!-- Plugins & MCP -->
+  <rect x="755" y="400" width="270" height="140" rx="12" fill="#2980b9" stroke="#2471a3" filter="url(#shadow)"/>
+  <text x="890" y="428" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Plugins &amp; MCP</text>
+  <text x="890" y="456" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">18</text>
+  <text x="890" y="474" text-anchor="middle" font-size="10" fill="#d4e6f1">MCP servers</text>
+  <text x="890" y="500" text-anchor="middle" font-size="10" fill="#ffffff">Serena, Context7, Playwright,</text>
+  <text x="890" y="514" text-anchor="middle" font-size="10" fill="#ffffff">Supabase, claude-mem,</text>
+  <text x="890" y="528" text-anchor="middle" font-size="10" fill="#ffffff">code-review-graph...</text>
+
+  <!-- Arrow: Execution to Hooks -->
+  <line x1="600" y1="550" x2="600" y2="585" stroke="#bdc3c7" stroke-width="2"/>
+  <polygon points="600,590 594,582 606,582" fill="#bdc3c7"/>
+
+  <!-- ===== SECTION 4: HOOKS ===== -->
+
+  <!-- SessionStart -->
+  <rect x="175" y="595" width="268" height="90" rx="10" fill="#f39c12" stroke="#e67e22" filter="url(#shadow)"/>
+  <text x="309" y="622" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">SessionStart</text>
+  <text x="309" y="647" text-anchor="middle" font-size="10" fill="#ffffff">Memory sync</text>
+  <text x="309" y="661" text-anchor="middle" font-size="10" fill="#ffffff">Update checks</text>
+  <text x="309" y="675" text-anchor="middle" font-size="10" fill="#ffffff">Plugin sync</text>
+
+  <!-- PreToolUse -->
+  <rect x="463" y="595" width="268" height="90" rx="10" fill="#f39c12" stroke="#e67e22" filter="url(#shadow)"/>
+  <text x="597" y="622" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">PreToolUse</text>
+  <text x="597" y="647" text-anchor="middle" font-size="10" fill="#ffffff">Security scan</text>
+  <text x="597" y="661" text-anchor="middle" font-size="10" fill="#ffffff">Prompt guard</text>
+  <text x="597" y="675" text-anchor="middle" font-size="10" fill="#ffffff">Read validation</text>
+
+  <!-- PostToolUse -->
+  <rect x="751" y="595" width="274" height="90" rx="10" fill="#f39c12" stroke="#e67e22" filter="url(#shadow)"/>
+  <text x="888" y="622" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">PostToolUse</text>
+  <text x="888" y="647" text-anchor="middle" font-size="10" fill="#ffffff">Context monitor</text>
+  <text x="888" y="661" text-anchor="middle" font-size="10" fill="#ffffff">Track usage</text>
+
+  <!-- Arrow: Hooks to Memory -->
+  <line x1="600" y1="695" x2="600" y2="725" stroke="#bdc3c7" stroke-width="2"/>
+  <polygon points="600,730 594,722 606,722" fill="#bdc3c7"/>
+
+  <!-- ===== SECTION 5: MEMORY ===== -->
+
+  <rect x="175" y="735" width="850" height="75" rx="8" fill="#27ae60" stroke="#229954" filter="url(#shadow)"/>
+  <text x="600" y="763" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Global Memory</text>
+  <text x="600" y="782" text-anchor="middle" font-size="12" fill="#d5f5e3">~/.claude/memory/</text>
+  <text x="600" y="800" text-anchor="middle" font-size="11" fill="#ffffff">Shared across ALL projects via symlinks  |  Preferences, dev profile, past decisions</text>
+
+</svg>

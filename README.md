@@ -4,33 +4,9 @@ My full Claude Code configuration — agents, skills, hooks, plugins, and global
 
 ## How It Works
 
-```
- YOU  -->  prompt  -->  CLAUDE CODE CLI
-+------------------------------------------------------------------+
-|                                                                   |
-|  CLAUDE.md ("the brain")          settings.json (config)          |
-|  14 auto-decision rules           model, plugins, hooks,         |
-|  that pick the right tools         env vars, telemetry            |
-|                                                                   |
-|  Rules auto-select the right combination of tools for the task   |
-|           |                                                       |
-|           v                                                       |
-|  +--------------------------------------------------------+      |
-|  |  Skills (100)    Agents (25)    Plugins (17)            |      |
-|  |  /slash cmds     spawned        MCP servers:            |      |
-|  |  for workflows   workers for    Serena, Context7,       |      |
-|  |  (TDD, debug,    parallel       Playwright, Supabase,   |      |
-|  |   planning...)   tasks          claude-mem, ...         |      |
-|  +--------------------------------------------------------+      |
-|           |                                                       |
-|  +--------------------------------------------------------+      |
-|  |  Hooks: security scan before edits, context monitoring  |      |
-|  |  Memory: your preferences + dev profile (global)        |      |
-|  +--------------------------------------------------------+      |
-+------------------------------------------------------------------+
-```
+![How Claude Code Setup Works](docs/architecture.svg)
 
-For the full visual walkthrough with component details, see [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md).
+Interactive diagram: [docs/architecture.drawio](docs/architecture.drawio) (open in [diagrams.net](https://app.diagrams.net/)).
 
 ## What's Included
 
@@ -98,11 +74,6 @@ Standalone MCP servers configured globally via `~/.claude/.mcp.json` (not part o
 
 Install: `uvx code-review-graph serve` (runs via uvx, no global pip install needed).
 
-## How It Works
-
-See [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md) for a visual walkthrough of how all the pieces fit together — with diagrams showing the request flow, component breakdown, and how tools get selected automatically.
-
-Interactive diagram: [docs/architecture.drawio](docs/architecture.drawio) (open in [diagrams.net](https://app.diagrams.net/)).
 
 ## Architecture
 
