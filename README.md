@@ -14,11 +14,11 @@ Interactive diagram: [docs/architecture.drawio](docs/architecture.drawio) (open 
 |-----------|-------|-------------|
 | **CLAUDE.md** | 1 | Global instructions (15 sections, 14 auto-decision rules) |
 | **Agents** | 21 | Specialized agent definitions (GSD framework) |
-| **Standalone Skills** | 61 | Slash commands (59 GSD + 2 other) |
+| **Standalone Skills** | 62 | Slash commands (59 GSD + 3 other) |
 | **Plugin Skills** | 32 | Skills bundled inside 5 plugins |
 | **Plugin Commands** | 7 | Commands bundled inside 3 plugins |
 | **Plugin Agents** | 4 | Agent definitions bundled inside 3 plugins |
-| **Total Slash Commands** | **100** | All available slash commands (61 + 32 + 7) |
+| **Total Slash Commands** | **101** | All available slash commands (62 + 32 + 7) |
 | **Hooks** | 8 | Lifecycle automation (SessionStart, PreToolUse, PostToolUse) |
 | **Plugins & MCP** | 19 (18 plugins + 1 standalone MCP) | Serena, Context7, Playwright, code-review-graph, etc. |
 
@@ -74,6 +74,15 @@ Standalone MCP servers configured globally via `~/.claude/.mcp.json` (not part o
 
 Install: `uvx code-review-graph serve` (runs via uvx, no global pip install needed).
 
+## Standalone Skills (External)
+
+Skills installed globally via pip/uvx (not part of the plugin system):
+
+| Skill | Source | Description |
+|-------|--------|-------------|
+| **graphify** | [safishamsi/graphify](https://github.com/safishamsi/graphify) | Knowledge graph from code, docs, papers, images — architecture understanding, design rationale, 19 languages, multimodal |
+
+Install: `uvx --from graphifyy graphify install` (auto-detects Claude Code, installs skill to `~/.claude/skills/graphify/`).
 
 ## Architecture
 

@@ -69,7 +69,7 @@
   <!-- Skills -->
   <rect x="175" y="560" width="270" height="140" rx="12" fill="#e74c3c" stroke="#c0392b" filter="url(#shadow)"/>
   <text x="310" y="588" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Skills</text>
-  <text x="310" y="616" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">100</text>
+  <text x="310" y="616" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">101</text>
   <text x="310" y="634" text-anchor="middle" font-size="10" fill="#f5c6cb">/slash commands</text>
   <text x="310" y="660" text-anchor="middle" font-size="10" fill="#ffffff">TDD, debugging,</text>
   <text x="310" y="674" text-anchor="middle" font-size="10" fill="#ffffff">planning, brainstorming,</text>

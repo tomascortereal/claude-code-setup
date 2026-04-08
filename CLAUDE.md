@@ -335,3 +335,12 @@ Fall back to Grep/Glob/Read **only** when the graph doesn't cover what you need.
 2. Use `detect_changes` for code review.
 3. Use `get_affected_flows` to understand impact.
 4. Use `query_graph` pattern="tests_for" to check coverage.
+
+## Skill: graphify (knowledge graph)
+
+USE WHEN: understanding architecture, finding design rationale, connecting concepts across code/docs/papers/images
+- `/graphify .` — build knowledge graph for current directory
+- `/graphify query "..."` — query the graph
+- `/graphify path "A" "B"` — trace path between nodes
+- `/graphify explain "X"` — explain a concept from the graph
+- Complements code-review-graph: graphify is for understanding "why", code-review-graph is for reviewing "what changed"
