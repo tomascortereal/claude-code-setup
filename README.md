@@ -2,6 +2,40 @@
 
 My full Claude Code configuration — agents, skills, hooks, plugins, and global instructions.
 
+## How It Works
+
+```
+ YOU
+  |
+  |  "fix the login bug"
+  v
++------------------------------------------------------------------+
+|                        CLAUDE CODE CLI                            |
+|                                                                   |
+|  CLAUDE.md ("the brain")          settings.json (config)          |
+|  14 auto-decision rules           model, plugins, hooks,         |
+|  that pick the right tools         env vars, telemetry            |
+|                                                                   |
+|  Rule fires: "bug? use Serena + debugging + memory search"       |
+|           |                                                       |
+|           v                                                       |
+|  +--------------------------------------------------------+      |
+|  |  Skills (100)    Agents (25)    Plugins (17)            |      |
+|  |  /slash cmds     spawned        MCP servers:            |      |
+|  |  for workflows   workers for    Serena, Context7,       |      |
+|  |  (TDD, debug,    parallel       Playwright, Supabase,   |      |
+|  |   planning...)   tasks          claude-mem, ...         |      |
+|  +--------------------------------------------------------+      |
+|           |                                                       |
+|  +--------------------------------------------------------+      |
+|  |  Hooks: security scan before edits, context monitoring  |      |
+|  |  Memory: your preferences + dev profile (global)        |      |
+|  +--------------------------------------------------------+      |
++------------------------------------------------------------------+
+```
+
+For the full visual walkthrough with component details, see [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md).
+
 ## What's Included
 
 | Component | Count | Description |
