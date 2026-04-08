@@ -45,6 +45,7 @@ For the full visual walkthrough with component details, see [docs/HOW-IT-WORKS.m
 | **Total Slash Commands** | **100** | All available slash commands (61 + 32 + 7) |
 | **Hooks** | 8 | Lifecycle automation (SessionStart, PreToolUse, PostToolUse) |
 | **Plugins** | 17 installed (16 enabled) | Installed via the install script |
+| **MCP Servers** | 1 | Standalone MCP servers (configured via `~/.claude/.mcp.json`) |
 
 ## Quick Install
 
@@ -87,6 +88,16 @@ Then edit `~/.claude/settings.json` to fill in your personal values (API URL, OT
 | **pyright** (v0.1.0) | Python type checking |
 | **basedpyright** (v0.1.0) | Enhanced Python type checking |
 | **vtsls** (v0.1.0) | TypeScript/JavaScript (disabled by default) |
+
+## MCP Servers
+
+Standalone MCP servers configured globally via `~/.claude/.mcp.json` (not part of the plugin system):
+
+| Server | Source | Description |
+|--------|--------|-------------|
+| **code-review-graph** | [tirth8205/code-review-graph](https://github.com/tirth8205/code-review-graph) | Knowledge graph for code review — semantic search, impact analysis, change detection, architecture overview |
+
+Install: `uvx code-review-graph serve` (runs via uvx, no global pip install needed).
 
 ## How It Works
 
