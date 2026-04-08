@@ -58,9 +58,13 @@ Then edit `~/.claude/settings.json` to fill in your personal values (API URL, OT
 | **basedpyright** (v0.1.0) | Enhanced Python type checking |
 | **vtsls** (v0.1.0) | TypeScript/JavaScript (disabled by default) |
 
+## How It Works
+
+See [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md) for a visual walkthrough of how all the pieces fit together — with diagrams showing the request flow, component breakdown, and how tools get selected automatically.
+
 ## Architecture
 
-See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full directory tree, model config, hook details, and how everything fits together.
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full directory tree, model config, hook details, and exact counts.
 
 ## Hooks
 
