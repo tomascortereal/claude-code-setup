@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2026-04-08T16:30:00.000Z" agent="Claude Code">
+<mxfile host="app.diagrams.net" modified="2026-04-08T16:55:00.000Z" agent="Claude Code">
   <diagram id="how-it-works" name="How It Works">
-    <mxGraphModel dx="1422" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="962" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="960" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
@@ -12,7 +12,7 @@
 
         <!-- Main Container: CLAUDE CODE CLI -->
         <mxCell id="container" value="CLAUDE CODE CLI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#adb5bd;strokeWidth=2;dashed=1;verticalAlign=top;fontSize=16;fontStyle=1;fontColor=#495057;spacingTop=8;arcSize=5;" vertex="1" parent="1">
-          <mxGeometry x="150" y="60" width="920" height="790" as="geometry"/>
+          <mxGeometry x="150" y="60" width="920" height="860" as="geometry"/>
         </mxCell>
 
         <!-- YOU (person icon) -->
@@ -28,96 +28,88 @@
           </mxGeometry>
         </mxCell>
 
-        <!-- ===== SECTION 1: CONFIGURATION ===== -->
+        <!-- ===== SECTION 1: SETTINGS.JSON (Foundation) ===== -->
 
-        <!-- CLAUDE.md -->
-        <mxCell id="claudemd" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;CLAUDE.md&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size: 11px;&quot;&gt;&quot;The Brain&quot;&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;15 sections of auto-decision rules&lt;br&gt;that tell Claude WHAT tools&lt;br&gt;to use and WHEN&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#0d0d1a;fontColor=#ffffff;shadow=1;arcSize=10;" vertex="1" parent="1">
-          <mxGeometry x="185" y="110" width="415" height="115" as="geometry"/>
+        <mxCell id="settings" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;settings.json&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size: 11px;&quot;&gt;The Foundation&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;model, plugins, hooks, env vars, permissions, telemetry&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 11px; color: #95a5a6;&quot;&gt;Defines WHAT tools exist and HOW the runtime is configured&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2c3e50;strokeColor=#1a252f;fontColor=#ffffff;shadow=1;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="185" y="110" width="850" height="100" as="geometry"/>
         </mxCell>
 
-        <!-- settings.json -->
-        <mxCell id="settings" value="&lt;b style=&quot;font-size: 15px;&quot;&gt;settings.json&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size: 11px;&quot;&gt;Configuration&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;model, plugins, hooks,&lt;br&gt;env vars, telemetry&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2c3e50;strokeColor=#1a252f;fontColor=#ffffff;shadow=1;arcSize=10;" vertex="1" parent="1">
-          <mxGeometry x="620" y="110" width="415" height="115" as="geometry"/>
-        </mxCell>
-
-        <!-- Arrow: Config to Decision -->
+        <!-- Arrow: Settings to Memory -->
         <mxCell id="arr1" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#bdc3c7;endFill=1;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="610" y="235" as="sourcePoint"/>
-            <mxPoint x="610" y="265" as="targetPoint"/>
+            <mxPoint x="610" y="220" as="sourcePoint"/>
+            <mxPoint x="610" y="250" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
 
-        <!-- ===== SECTION 2: DECISION ENGINE ===== -->
+        <!-- ===== SECTION 2: GLOBAL MEMORY (Context) ===== -->
 
-        <!-- 14 Decision Rules -->
-        <mxCell id="rules" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;14 Decision Rules  —  Automatic Tool Selection&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Rules in CLAUDE.md automatically match your request to the right combination of tools&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498db;strokeColor=#2980b9;fontColor=#ffffff;shadow=1;arcSize=8;" vertex="1" parent="1">
-          <mxGeometry x="185" y="275" width="850" height="80" as="geometry"/>
+        <mxCell id="memory" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Global Memory&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size: 11px;&quot;&gt;~/.claude/memory/&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Shared across ALL projects via symlinks&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 11px; color: #d5f5e3;&quot;&gt;Preferences, dev profile, past decisions — cross-session context&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=#229954;fontColor=#ffffff;shadow=1;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="185" y="260" width="850" height="100" as="geometry"/>
         </mxCell>
 
-        <!-- Arrow: Decision to Execution -->
+        <!-- Arrow: Memory to CLAUDE.md -->
         <mxCell id="arr2" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#bdc3c7;endFill=1;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="610" y="365" as="sourcePoint"/>
-            <mxPoint x="610" y="395" as="targetPoint"/>
+            <mxPoint x="610" y="370" as="sourcePoint"/>
+            <mxPoint x="610" y="400" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
 
-        <!-- ===== SECTION 3: EXECUTION LAYER ===== -->
+        <!-- ===== SECTION 3: CLAUDE.MD (The Brain) ===== -->
+
+        <mxCell id="claudemd" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;CLAUDE.md&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size: 11px;&quot;&gt;&quot;The Brain&quot;&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;15 sections of instructions with 14 auto-decision rules&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 11px; color: #95a5a6;&quot;&gt;Rules automatically match your request to the right combination of tools&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#0d0d1a;fontColor=#ffffff;shadow=1;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="185" y="410" width="850" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrow: CLAUDE.md to Execution -->
+        <mxCell id="arr3" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#bdc3c7;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="530" as="sourcePoint"/>
+            <mxPoint x="610" y="560" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ===== SECTION 4: EXECUTION LAYER ===== -->
 
         <!-- Skills -->
         <mxCell id="skills" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;Skills&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;100&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;/slash commands&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;TDD, debugging,&lt;br&gt;planning, brainstorming,&lt;br&gt;code review...&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e74c3c;strokeColor=#c0392b;fontColor=#ffffff;shadow=1;arcSize=12;" vertex="1" parent="1">
-          <mxGeometry x="185" y="405" width="270" height="140" as="geometry"/>
+          <mxGeometry x="185" y="570" width="270" height="140" as="geometry"/>
         </mxCell>
 
         <!-- Agents -->
         <mxCell id="agents" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;Agents&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;25&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;spawned workers&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;Code review, parallel&lt;br&gt;tasks, research,&lt;br&gt;exploration...&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9b59b6;strokeColor=#8e44ad;fontColor=#ffffff;shadow=1;arcSize=12;" vertex="1" parent="1">
-          <mxGeometry x="475" y="405" width="270" height="140" as="geometry"/>
+          <mxGeometry x="475" y="570" width="270" height="140" as="geometry"/>
         </mxCell>
 
         <!-- Plugins & MCP Servers -->
         <mxCell id="plugins" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;Plugins &amp;amp; MCP&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;18&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;MCP servers&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;Serena, Context7, Playwright,&lt;br&gt;Supabase, claude-mem,&lt;br&gt;code-review-graph...&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2980b9;strokeColor=#2471a3;fontColor=#ffffff;shadow=1;arcSize=12;" vertex="1" parent="1">
-          <mxGeometry x="765" y="405" width="270" height="140" as="geometry"/>
+          <mxGeometry x="765" y="570" width="270" height="140" as="geometry"/>
         </mxCell>
 
         <!-- Arrow: Execution to Hooks -->
-        <mxCell id="arr3" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#bdc3c7;endFill=1;" edge="1" parent="1">
+        <mxCell id="arr4" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#bdc3c7;endFill=1;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="610" y="555" as="sourcePoint"/>
-            <mxPoint x="610" y="585" as="targetPoint"/>
+            <mxPoint x="610" y="720" as="sourcePoint"/>
+            <mxPoint x="610" y="750" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
 
-        <!-- ===== SECTION 4: HOOKS ===== -->
+        <!-- ===== SECTION 5: HOOKS ===== -->
 
         <!-- SessionStart -->
         <mxCell id="hook1" value="&lt;b style=&quot;font-size: 13px;&quot;&gt;SessionStart&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;Memory sync&lt;br&gt;Update checks&lt;br&gt;Plugin sync&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f39c12;strokeColor=#e67e22;fontColor=#ffffff;shadow=1;arcSize=10;" vertex="1" parent="1">
-          <mxGeometry x="185" y="595" width="268" height="90" as="geometry"/>
+          <mxGeometry x="185" y="760" width="268" height="90" as="geometry"/>
         </mxCell>
 
         <!-- PreToolUse -->
         <mxCell id="hook2" value="&lt;b style=&quot;font-size: 13px;&quot;&gt;PreToolUse&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;Security scan&lt;br&gt;Prompt guard&lt;br&gt;Read validation&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f39c12;strokeColor=#e67e22;fontColor=#ffffff;shadow=1;arcSize=10;" vertex="1" parent="1">
-          <mxGeometry x="473" y="595" width="268" height="90" as="geometry"/>
+          <mxGeometry x="473" y="760" width="268" height="90" as="geometry"/>
         </mxCell>
 
         <!-- PostToolUse -->
         <mxCell id="hook3" value="&lt;b style=&quot;font-size: 13px;&quot;&gt;PostToolUse&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;Context monitor&lt;br&gt;Track usage&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f39c12;strokeColor=#e67e22;fontColor=#ffffff;shadow=1;arcSize=10;" vertex="1" parent="1">
-          <mxGeometry x="761" y="595" width="274" height="90" as="geometry"/>
-        </mxCell>
-
-        <!-- Arrow: Hooks to Memory -->
-        <mxCell id="arr4" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#bdc3c7;endFill=1;" edge="1" parent="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="610" y="695" as="sourcePoint"/>
-            <mxPoint x="610" y="725" as="targetPoint"/>
-          </mxGeometry>
-        </mxCell>
-
-        <!-- ===== SECTION 5: MEMORY ===== -->
-
-        <!-- Global Memory -->
-        <mxCell id="memory" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;Global Memory&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;~/.claude/memory/&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;Shared across ALL projects via symlinks  |  Preferences, dev profile, past decisions&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=#229954;fontColor=#ffffff;shadow=1;arcSize=8;" vertex="1" parent="1">
-          <mxGeometry x="185" y="735" width="850" height="85" as="geometry"/>
+          <mxGeometry x="761" y="760" width="274" height="90" as="geometry"/>
         </mxCell>
 
       </root>
