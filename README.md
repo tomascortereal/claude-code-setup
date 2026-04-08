@@ -20,7 +20,7 @@ Interactive diagram: [docs/architecture.drawio](docs/architecture.drawio) (open 
 | **Plugin Agents** | 4 | Agent definitions bundled inside 3 plugins |
 | **Total Slash Commands** | **100** | All available slash commands (61 + 32 + 7) |
 | **Hooks** | 8 | Lifecycle automation (SessionStart, PreToolUse, PostToolUse) |
-| **Plugins & MCP** | 18 (17 plugins + 1 standalone MCP) | Serena, Context7, Playwright, code-review-graph, etc. |
+| **Plugins & MCP** | 19 (18 plugins + 1 standalone MCP) | Serena, Context7, Playwright, code-review-graph, etc. |
 
 ## Quick Install
 
@@ -34,7 +34,7 @@ Then edit `~/.claude/settings.json` to fill in your personal values (API URL, OT
 
 ## Plugins
 
-### Official (claude-plugins-official) — 11 plugins
+### Official (claude-plugins-official) — 12 plugins
 | Plugin | Description |
 |--------|-------------|
 | **serena** | Semantic code navigation (LSP-based symbols, references, edits) |

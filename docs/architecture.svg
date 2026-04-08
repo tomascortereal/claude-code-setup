@@ -87,7 +87,7 @@
   <!-- Plugins & MCP -->
   <rect x="755" y="560" width="270" height="140" rx="12" fill="#2980b9" stroke="#2471a3" filter="url(#shadow)"/>
   <text x="890" y="588" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Plugins &amp; MCP</text>
-  <text x="890" y="616" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">18</text>
+  <text x="890" y="616" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">19</text>
   <text x="890" y="634" text-anchor="middle" font-size="10" fill="#d4e6f1">MCP servers</text>
   <text x="890" y="660" text-anchor="middle" font-size="10" fill="#ffffff">Serena, Context7, Playwright,</text>
   <text x="890" y="674" text-anchor="middle" font-size="10" fill="#ffffff">Supabase, claude-mem,</text>
