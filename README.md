@@ -103,6 +103,8 @@ Install: `uvx code-review-graph serve` (runs via uvx, no global pip install need
 
 See [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md) for a visual walkthrough of how all the pieces fit together — with diagrams showing the request flow, component breakdown, and how tools get selected automatically.
 
+Interactive diagram: [docs/architecture.drawio](docs/architecture.drawio) (open in [diagrams.net](https://app.diagrams.net/)).
+
 ## Architecture
 
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full directory tree, model config, hook details, and exact counts.
