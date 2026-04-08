@@ -2,7 +2,7 @@
 
 ## Summary
 
-**17 plugins installed, 16 enabled, 2 disabled** (greptile, vtsls)
+**19 plugins installed, 17 enabled, 2 disabled** (greptile, vtsls)
 
 ## Install Commands
 
@@ -38,6 +38,12 @@ claude plugins install claude-mem --marketplace thedotmack
 claude plugins install arize-skills --marketplace Arize-ai-arize-skills
 ```
 
+### OpenAI Codex Plugin
+```bash
+/plugin marketplace add openai/codex-plugin-cc
+/plugin install codex@openai-codex
+```
+
 ## Third-Party Marketplace Config
 
 These are configured in `settings.json` under `extraKnownMarketplaces`:
@@ -48,6 +54,7 @@ These are configured in `settings.json` under `extraKnownMarketplaces`:
 | `thedotmack` | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) |
 | `Arize-ai-arize-skills` | [Arize-ai/arize-skills](https://github.com/Arize-ai/arize-skills) |
 | `claude-code-lsps` | [Piebald-AI/claude-code-lsps](https://github.com/Piebald-AI/claude-code-lsps) |
+| `openai-codex` | [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc) |
 
 ## Disabled Plugins
 
@@ -58,7 +65,7 @@ These are configured in `settings.json` under `extraKnownMarketplaces`:
 
 To enable: set to `true` in `settings.json` under `enabledPlugins`.
 
-## Skills Bundled in Plugins (32 skills + 7 commands + 4 agents)
+## Skills Bundled in Plugins (34 skills + 7 commands + 5 agents)
 
 ### Superpowers v5.0.7 (14 skills)
 - `/brainstorming` — creative ideation before implementation

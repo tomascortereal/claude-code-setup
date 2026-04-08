@@ -19,9 +19,10 @@
 ├── agents/                      # 21 custom agent definitions (all GSD framework)
 │   └── gsd-*.md
 │
-├── skills/                      # 61 standalone slash commands (59 GSD + 2 other)
+├── skills/                      # 62 standalone slash commands (59 GSD + 3 other)
 │   ├── gsd-*/SKILL.md
-│   └── sync/SKILL.md
+│   ├── sync/SKILL.md
+│   └── graphify/SKILL.md
 │
 ├── hooks/                       # 8 hook files (6 wired in settings.json)
 │   ├── global-memory-symlink.sh # SessionStart: global memory symlinks
@@ -33,7 +34,7 @@
 │   ├── gsd-workflow-guard.js    # NOT wired — available but inactive
 │   └── gsd-statusline.js        # NOT a hook — used by statusLine config
 │
-├── plugins/                     # 17 installed, 16 enabled (~598 MB)
+├── plugins/                     # 19 installed, 17 enabled (~598 MB)
 ├── get-shit-done/               # GSD framework v1.32.0 (self-installs)
 │   ├── VERSION                  # 1.32.0
 │   ├── bin/gsd-tools.cjs        # CLI tool + lib/

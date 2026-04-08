@@ -17,9 +17,10 @@ USE WHEN: understanding code structure, finding definitions, tracing references,
 - `replace_symbol_body`, `insert_before_symbol`, `insert_after_symbol` — precise symbolic edits
 - PREFER Serena's symbolic tools over reading entire files. Get overview first, drill into specifics.
 
-### Greptile (plugin — codebase intelligence)
+### Greptile (plugin — codebase intelligence, disabled by default)
 USE WHEN: you need high-level codebase understanding, semantic code search beyond simple grep
 - Good for "how does X work in this codebase" type questions
+- NOTE: Disabled in settings.json — enable if needed
 
 ### LSPs: Pyright / BasedPyright / TypeScript LSP (plugins)
 USE WHEN: type checking, go-to-definition, completions, diagnostics for Python or TypeScript code
@@ -305,6 +306,7 @@ USE WHEN: you need capabilities beyond what other tools provide:
 12. **After writing significant code** → spawn code-simplifier agent to review
 13. **LLM app observability/tracing/debugging** → Arize skills (trace, experiment, prompt-optimization)
 14. **Task has 2+ independent pieces** → PROACTIVELY suggest Agent Teams, explain the split and why it's faster
+15. **Code review or impact analysis** → code-review-graph (detect_changes, get_impact_radius) BEFORE manual code inspection
 
 <!-- code-review-graph MCP tools -->
 ## MCP Tools: code-review-graph

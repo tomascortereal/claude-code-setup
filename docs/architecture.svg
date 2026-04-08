@@ -78,7 +78,7 @@
   <!-- Agents -->
   <rect x="465" y="560" width="270" height="140" rx="12" fill="#9b59b6" stroke="#8e44ad" filter="url(#shadow)"/>
   <text x="600" y="588" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Agents</text>
-  <text x="600" y="616" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">25</text>
+  <text x="600" y="616" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">26</text>
   <text x="600" y="634" text-anchor="middle" font-size="10" fill="#e8d5f5">spawned workers</text>
   <text x="600" y="660" text-anchor="middle" font-size="10" fill="#ffffff">Code review, parallel</text>
   <text x="600" y="674" text-anchor="middle" font-size="10" fill="#ffffff">tasks, research,</text>
