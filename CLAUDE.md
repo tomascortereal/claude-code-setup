@@ -256,6 +256,15 @@ USE WHEN: LLM observability, tracing, experiments, prompt optimization — anyth
 - Skills: `arize-link` — generate deep links to Arize UI
 - Requires: `ax` CLI + `ARIZE_API_KEY` and `ARIZE_SPACE_ID` env vars
 
+### Codex (plugin: `codex@openai-codex`)
+USE WHEN: you want a second opinion from OpenAI's Codex, need code review from a different model, or want to delegate tasks to run in background
+- `/codex:review` — Codex code review of current changes (supports `--base main`, `--background`)
+- `/codex:adversarial-review` — steerable challenge review (pressure-test assumptions, tradeoffs)
+- `/codex:rescue` — delegate investigation or fix to Codex as background worker
+- `/codex:status`, `/codex:result`, `/codex:cancel` — manage background Codex jobs
+- Agent: `codex:codex-rescue` — subagent for delegating tasks to Codex
+- Requires: ChatGPT subscription or OpenAI API key + Codex CLI (`npm install -g @openai/codex`)
+
 ### Finishing a Branch (skill: `superpowers:finishing-a-development-branch`)
 USE WHEN: implementation is complete, tests pass, deciding how to integrate (merge, PR, cleanup)
 

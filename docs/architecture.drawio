@@ -73,7 +73,7 @@
         <!-- ===== SECTION 4: EXECUTION LAYER ===== -->
 
         <!-- Skills -->
-        <mxCell id="skills" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;Skills&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;101&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;/slash commands&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;TDD, debugging,&lt;br&gt;planning, brainstorming,&lt;br&gt;code review...&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e74c3c;strokeColor=#c0392b;fontColor=#ffffff;shadow=1;arcSize=12;" vertex="1" parent="1">
+        <mxCell id="skills" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;Skills&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;103&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;/slash commands&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;TDD, debugging,&lt;br&gt;planning, brainstorming,&lt;br&gt;code review...&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e74c3c;strokeColor=#c0392b;fontColor=#ffffff;shadow=1;arcSize=12;" vertex="1" parent="1">
           <mxGeometry x="185" y="570" width="270" height="140" as="geometry"/>
         </mxCell>
 
@@ -83,7 +83,7 @@
         </mxCell>
 
         <!-- Plugins & MCP Servers -->
-        <mxCell id="plugins" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;Plugins &amp;amp; MCP&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;19&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;MCP servers&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;Serena, Context7, Playwright,&lt;br&gt;Supabase, claude-mem,&lt;br&gt;code-review-graph...&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2980b9;strokeColor=#2471a3;fontColor=#ffffff;shadow=1;arcSize=12;" vertex="1" parent="1">
+        <mxCell id="plugins" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;Plugins &amp;amp; MCP&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;20&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;MCP servers&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;Serena, Context7, Playwright,&lt;br&gt;Supabase, claude-mem,&lt;br&gt;code-review-graph...&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2980b9;strokeColor=#2471a3;fontColor=#ffffff;shadow=1;arcSize=12;" vertex="1" parent="1">
           <mxGeometry x="765" y="570" width="270" height="140" as="geometry"/>
         </mxCell>
 

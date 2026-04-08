@@ -15,12 +15,12 @@ Interactive diagram: [docs/architecture.drawio](docs/architecture.drawio) (open 
 | **CLAUDE.md** | 1 | Global instructions (15 sections, 14 auto-decision rules) |
 | **Agents** | 21 | Specialized agent definitions (GSD framework) |
 | **Standalone Skills** | 62 | Slash commands (59 GSD + 3 other) |
-| **Plugin Skills** | 32 | Skills bundled inside 5 plugins |
+| **Plugin Skills** | 34 | Skills bundled inside 6 plugins |
 | **Plugin Commands** | 7 | Commands bundled inside 3 plugins |
-| **Plugin Agents** | 4 | Agent definitions bundled inside 3 plugins |
-| **Total Slash Commands** | **101** | All available slash commands (62 + 32 + 7) |
+| **Plugin Agents** | 5 | Agent definitions bundled inside 4 plugins |
+| **Total Slash Commands** | **103** | All available slash commands (62 + 34 + 7) |
 | **Hooks** | 8 | Lifecycle automation (SessionStart, PreToolUse, PostToolUse) |
-| **Plugins & MCP** | 19 (18 plugins + 1 standalone MCP) | Serena, Context7, Playwright, code-review-graph, etc. |
+| **Plugins & MCP** | 20 (19 plugins + 1 standalone MCP) | Serena, Context7, Playwright, Codex, code-review-graph, etc. |
 
 ## Quick Install
 
@@ -56,6 +56,11 @@ Then edit `~/.claude/settings.json` to fill in your personal values (API URL, OT
 | **ui-ux-pro-max** (v2.0.1) | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | 50+ styles, 161 palettes, 99 UX guidelines (7 skills) |
 | **claude-mem** (v10.5.5) | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | Persistent cross-session memory (4 skills) |
 | **arize-skills** (v0.1.0) | [Arize-ai/arize-skills](https://github.com/Arize-ai/arize-skills) | LLM observability, tracing, experiments (6 skills) |
+
+### OpenAI ([openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc)) — 1 plugin
+| Plugin | Description |
+|--------|-------------|
+| **codex** | Codex code review, adversarial review, task delegation (2 skills, 1 agent) |
 
 ### LSPs ([Piebald-AI/claude-code-lsps](https://github.com/Piebald-AI/claude-code-lsps)) — 3 plugins
 | Plugin | Description |
