@@ -1,0 +1,48 @@
+# Credentials & secrets
+.credentials.json
+.env
+settings.local.json
+
+# Plugin caches (installed via install.sh)
+plugins/cache/
+plugins/repos/
+plugins/data/
+plugins/installed_plugins.json
+plugins/install-counts-cache.json
+
+# Runtime state
+sessions/
+session-env/
+tasks/
+teams/
+todos/
+history.jsonl
+stats-cache.json
+gsd-file-manifest.json
+package.json
+
+# Generated/temp
+debug/
+telemetry/
+backups/
+cache/
+paste-cache/
+file-history/
+shell-snapshots/
+ide/
+
+# GSD framework (installed separately)
+get-shit-done/
+
+# Personal project data
+projects/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Personal memory content (template MEMORY.md is tracked)
+memory/feedback_*.md
+memory/user_*.md
+memory/project_*.md
+memory/reference_*.md
