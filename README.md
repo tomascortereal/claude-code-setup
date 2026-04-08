@@ -5,18 +5,14 @@ My full Claude Code configuration — agents, skills, hooks, plugins, and global
 ## How It Works
 
 ```
- YOU
-  |
-  |  "fix the login bug"
-  v
+ YOU  -->  prompt  -->  CLAUDE CODE CLI
 +------------------------------------------------------------------+
-|                        CLAUDE CODE CLI                            |
 |                                                                   |
 |  CLAUDE.md ("the brain")          settings.json (config)          |
 |  14 auto-decision rules           model, plugins, hooks,         |
 |  that pick the right tools         env vars, telemetry            |
 |                                                                   |
-|  Rule fires: "bug? use Serena + debugging + memory search"       |
+|  Rules auto-select the right combination of tools for the task   |
 |           |                                                       |
 |           v                                                       |
 |  +--------------------------------------------------------+      |

@@ -3,10 +3,7 @@
 ## The Big Picture
 
 ```
- YOU
-  |
-  |  "fix the login bug"
-  v
+ YOU  -->  prompt  -->  CLAUDE CODE CLI
 +------------------------------------------------------------------+
 |                        CLAUDE CODE CLI                            |
 |                                                                   |
